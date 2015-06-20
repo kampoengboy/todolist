@@ -7,6 +7,8 @@ Todo List app ini adalah aplikasi todolist sederhana untuk pengerjaan tugas proj
 3. AngularJS (http://angularjs.org)
 4. MongoDB (http://mongodb.org)
 
+Bagi anda yang belum menginstall mongoDB di PC / Laptop anda, terdapat referensi video cara menginstall mongoDB ini yaitu di https://www.youtube.com/watch?v=oVIeMfvgTz8
+
 Untuk langkah awal, pastikan mongoDB sudah terinstall di dalam PC / Laptop anda. Setelah itu gunakan perintah
 
 	npm install
