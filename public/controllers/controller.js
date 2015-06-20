@@ -8,7 +8,12 @@ todoApp.controller('AppCtrl', ['$scope','$http', function($scope, $http){
 				info.innerHTML="Belum ada data";
 			else
 				info.innerHTML="";
-			$scope.todolist = response;
+			var data = [];
+			for(var i=0;i<response.length;i++)
+			{
+				data.push(response[i]);
+			}
+			$scope.todolist = data;
 			$scope.todo = "";
 		});
 	}

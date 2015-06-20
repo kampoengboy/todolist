@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>A Simple To Do List App</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
@@ -13,11 +14,11 @@
 		<table class="table">
 			<tbody>
 				<div id="list">
-					<tr ng-repeat="todo in todolist">
+					<tr ng-repeat="todo in todolist" class="list{{($index+1)%2}}">
 						<td>{{todo.name}}</td>
 						<td></td>
 						<td></td>
-						<td><button class="btn btn-danger" ng-click="remove(todo._id)">Remove</button></td>
+						<td><button class="btn btn-danger" ng-click="remove(todo._id)">Delete</button></td>
 					</tr>
 				</div>
 				<tr>
@@ -29,6 +30,13 @@
 			</tbody>
 		</table>
 	</div>
+	<footer class="red">
+                    <div class="container">
+                        <div class="">
+                                <p class="copyright text-muted small">Copyright &copy; mikelrn 2015. All Rights Reserved</p>
+                        </div>
+                    </div>
+            </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
 <script src="controllers/controller.js"></script>
