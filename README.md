@@ -9,7 +9,7 @@ Todo List app ini adalah aplikasi todolist sederhana untuk pengerjaan tugas proj
 
 Bagi anda yang belum menginstall mongoDB di PC / Laptop anda, terdapat referensi video cara menginstall mongoDB ini yaitu di https://www.youtube.com/watch?v=oVIeMfvgTz8
 
-Untuk langkah awal, pastikan mongoDB sudah terinstall di dalam PC / Laptop anda. Setelah itu masuk ke dalam folder dimana anda mendownload todolist ini dan gunakan perintah ini di terminal atau command-prompt anda
+Untuk langkah awal, pastikan mongoDB sudah terinstall di dalam PC / Laptop anda. Setelah itu masuk ke dalam folder dimana anda mendownload todolist ini dan gunakan perintah ini di terminal atau command-prompt anda untuk mendownload node_modules yang diperlukan untuk menjalankan aplikasi todolist ini
 
 	npm install
 
