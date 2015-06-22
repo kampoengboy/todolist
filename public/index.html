@@ -10,7 +10,7 @@
 <body>
 	<div class="container" ng-controller="AppCtrl">
 		<h1>Simple Todo List App</h1>
-		<h3 id="info"></h3>
+		<p id="info"></p>
 		<table class="table">
 			<tbody>
 				<div id="list">
@@ -22,10 +22,14 @@
 					</tr>
 				</div>
 				<tr>
-					<td><input class="form-control" ng-model="todo.name"></td>
+					<td>
+						<label>Tambah Data Baru</label>
+						<input class="form-control" ng-model="todo.name">
+					</td>
 					<td></td>
 					<td></td>
-				          <td><button class="btn btn-primary" ng-click="addTodo()">Tambah</button></td>
+				          <td><br>
+				          <button class="btn btn-primary" ng-click="addTodo()" id="btn">Tambah</button></td>
 				</tr>
 			</tbody>
 		</table>

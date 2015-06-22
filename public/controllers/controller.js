@@ -5,9 +5,12 @@ todoApp.controller('AppCtrl', ['$scope','$http', function($scope, $http){
 		$http.get('/todolist').success(function(response){
 			var info = document.getElementById('info');
 			if(response.length==0)
+			{
 				info.innerHTML="Belum ada data";
+				info.style.display="block";
+			}
 			else
-				info.innerHTML="";
+				info.style.display="none";
 			var data = [];
 			for(var i=0;i<response.length;i++)
 			{
