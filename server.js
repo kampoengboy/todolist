@@ -1,17 +1,27 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('todolist',['todolist']);
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/todolist');
+
+var TodoSchema = new mongoose.Schema({
+  	name : 'string'
+});
+
+var todo = mongoose.model('todolist', TodoSchema);
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 app.get('/todolist', function(req,res){
 	
-	db.todolist.find(function(err,docs){
-		res.json(docs);
+	todo.find(function(err, todo){
+	    if(err) console.log(err);
+	    else res.json(todo);
 	});
+
 	/*person1 = {
 		name : 'Tim',
 		email : 'tim@email.com',
@@ -34,14 +44,14 @@ app.get('/todolist', function(req,res){
 });
 
 app.post('/todolist', function (req, res) {
-  db.todolist.insert(req.body, function(err, doc) {
+  todo.create(req.body, function(err, doc) {
     res.json(doc);
   });
 });
 
 app.delete('/todolist/:id', function (req, res) {
   var id = req.params.id;
-  db.todolist.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
+  todo.remove({_id:id}, function (err, doc) {
     res.json(doc);
   });
 });

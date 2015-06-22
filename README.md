@@ -17,14 +17,6 @@ Setelah mongoDB sudah terinstall, gunakan perintah di bawah ini untuk menjalanka
 
 	mongod
 
-Kemudian, jalankan perintah ini untuk masuk kedalam shell mongoDB
-
-	mongo
-
-Ciptakan sebuah database dengan nama todolist dengan perintah
-
-	use todolist
-
 Kemudian setelah itu, jalankan express anda dengan menggunakan perintah
 
 	node server
